@@ -834,3 +834,13 @@ nav {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .lunatic-system {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+}
