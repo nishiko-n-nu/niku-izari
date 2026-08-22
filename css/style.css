@@ -38,6 +38,7 @@ nav {
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 main {
@@ -366,11 +367,11 @@ main {
     }
 
     .side-decoration {
-        width: 55px;
+        width: 25px;
     }
 
     .main-photo {
-        width: 330px;
+        width: 500px;
     }
 
     main p {
@@ -383,6 +384,50 @@ main {
 
     main ul {
         font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* ページ全体 */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* 見出し */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* 画像が画面から飛び出さないようにする */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ナビ */
+    nav {
+        padding: 10px 10px 100px;
+    }
+
+    nav a {
+        padding: 10px 14px;
+        margin: 4px;
     }
 
 }

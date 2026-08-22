@@ -258,22 +258,6 @@ html {
     font-size: 45px;
 }
 
-.system-description {
-    max-width: 650px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.system-description h3 {
-    margin: 0 0 10px;
-    font-size: 22px;
-}
-
-.system-description p {
-    margin: 0 0 15px;
-    line-height: 1.8;
-}
-
 .lunatic-system h2 {
     font-family: "Cinzel", serif;
 }
@@ -718,13 +702,122 @@ nav {
     padding: 12px 0;
 }
 
-.secret-home {
+.back-home {
     color: rgba(255,255,255,0.35);
     font-size: 12px;
     text-decoration: none;
 }
 
-.secret-home:hover {
+.back-home:hover {
     color: #00FFD0;
     text-shadow: 0 0 10px #00FFD0;
+}
+
+.system-description {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 35px 45px;
+    box-sizing: border-box;
+
+    line-height: 1.9;
+    text-align: left;
+}
+
+.system-description h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.system-description p {
+    margin: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .system-description {
+        width: calc(100% - 30px);
+        padding: 25px 20px;
+        margin: 40px auto;
+    }
+
+    .system-description p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+
+.back-home {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 20px;
+    padding: 12px 24px;
+
+    color: #17105C;
+    background: white;
+    text-decoration: none;
+
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    background: #00e5b0;
+}
+
+@media (max-width: 600px) {
+
+    .back-home {
+        margin-top: 35px;
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .keyvisual {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .news,
+    .story,
+    .system-description {
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .system-description {
+        padding: 25px 20px;
+    }
+
+    .system-description p {
+        line-height: 1.8;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .manga-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.story p {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
 }
