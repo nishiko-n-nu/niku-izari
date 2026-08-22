@@ -1,0 +1,730 @@
+body {
+    background-color: #10152e;
+    color: white;
+    margin: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.lunatic-logo {
+    width: 600px;
+    height: auto;
+}
+
+.keyvisual {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    padding: 15px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+header,
+main,
+section,
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+header,
+main,
+section,
+nav {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.news {
+    margin: 80px auto;
+    padding: 30px;
+}
+
+.news ul {
+    display: block;
+    padding: 100px;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.news li {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.news time {
+    margin-right: 20px;
+}
+
+.news h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.news h2 {
+    margin: 0;
+    line-height: 1;
+}
+
+.news ul {
+    margin: 0;
+}
+
+.news h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.news ul {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.characters {
+    margin: 80px auto;
+    padding: 30px 20px;
+}
+
+.characters h2 {
+    margin-bottom: 30px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.character-item {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.character-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.character-item span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.character-item {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.character-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+
+    border: 3px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+.character-item span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.character-item:hover {
+    transform: translateY(-8px);
+}
+
+.character-item:hover img {
+    filter: brightness(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.how-to-play img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.rule-block h3 {
+    margin: 0 0 5px;
+}
+
+.card-type {
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.card-type h4 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.card-type p {
+    margin: 0 0 5px;
+}
+
+.how-to-play {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 30px 20px;
+}
+
+.rule-block {
+    text-align: left;
+    margin: 30px auto 35px;
+    max-width: 650px;
+}
+
+.rule-block h3 {
+    margin: 0 0 5px;
+}
+
+.rule-block p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.lunatic-system {
+    margin: 150px auto;
+    padding: 100px 30px;
+    max-width: 1000px;
+    text-align: center;
+    background-color: #080b20;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
+    max-height: 700px;
+
+}
+
+.lunatic-system h2 {
+    margin: 0;
+    font-size: 56px;
+    letter-spacing: 10px;
+}
+
+.system-copy {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.moon-phases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 0 60px;
+    font-size: 45px;
+}
+
+.system-description {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.system-description h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.system-description p {
+    margin: 0 0 15px;
+    line-height: 1.8;
+}
+
+.lunatic-system h2 {
+    font-family: "Cinzel", serif;
+}
+
+.system-description h3 {
+    text-align: center;
+}
+
+.manga-list {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.latest-episode {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    max-width: 800px;
+    margin: 40px auto 60px;
+    padding: 25px;
+
+    background-color: #ffd700;
+    box-sizing: border-box;
+}
+
+.latest-episode img {
+    width: 200px;
+    height: auto;
+}
+
+.latest-episode div {
+    text-align: left;
+}
+
+.latest-episode h2 {
+    margin: 0 0 10px;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.episode-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px;
+
+    background-color: #f5d76e;
+    color: #10152e;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+.episode-box img {
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.episode-box span {
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .episode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-episode {
+        flex-direction: column;
+    }
+
+    .latest-episode img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+.latest-episode {
+    color: #10152e;
+}
+
+.manga {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 50px 40px;
+    background-color: #b0c4de;
+    color: #10152e;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.manga h2 {
+    margin: 0 0 10px;
+    font-size: 42px;
+    letter-spacing: 6px;
+}
+
+.manga-lead {
+    margin: 0 0 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.manga-link {
+    display: inline-block;
+    color: #10152e;
+    text-decoration: none;
+}
+
+.manga-link img {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 0 auto 15px;
+    border: 8px solid #10152e;
+    box-sizing: border-box;
+}
+
+.manga-link span {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #10152e;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+.manga-link img {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border: 8px solid #10152e;
+    box-sizing: border-box;
+}
+
+.manga-link span {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #10152e;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+.pack-banner {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+
+    background-color: white;
+    color: #10152e;
+
+    text-align: center;
+
+    border: 5px solid white;
+}
+
+.pack-banner h2 {
+    margin: 10px 0;
+    font-size: 48px;
+    letter-spacing: 5px;
+}
+.pack-banner img {
+    width: 350px;
+    max-width: 80%;
+    height: auto;
+    margin: 30px auto;
+}
+
+.pack-release {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.pack-banner {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 30px 40px;
+    
+    background-color:#B3424A;
+    color: #10152e;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    box-sizing: border-box;
+
+    border-radius: 25px;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+.pack-image {
+    flex-shrink: 0 ;
+    width: 220px;
+}
+
+.pack-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px rgba(255,255,255,0.7);
+}
+
+.pack-info {
+    flex: 1;
+    text-align: center;
+}
+
+.pack-info h2 {
+    margin: 8px 0;
+    font-size: 42px;
+    letter-spacing: 5px;
+
+    text-shadow:
+        2px 2px 0 #40101a,
+        0 0 10px rgba(255,255,255,0.8);
+
+        font-family: "WDXL Lubrifont JP N", sans-serif;
+}
+
+.pack-label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.pack-label {
+    text-shadow:
+        0 0 5px white,
+        0 0 12px white;
+}
+
+.pack-details {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.pack-release {
+    margin: 20px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.pack-release {
+    margin: 25px 0 0;
+
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 15px white;
+}
+
+.pack-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.sparkle {
+    position: absolute;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.sparkle-1 {
+    top: 15px;
+    left: 30px;
+    font-size: 25px;
+}
+
+.sparkle-2 {
+    bottom: 20px;
+    right: 35px;
+    font-size: 18px;
+}
+
+.sparkle-3 {
+    top: 35px;
+    right: 100px;
+    font-size: 12px;
+}
+.sparkle-4 {
+    bottom: 15px;
+    left: 35px;
+    font-size: 28px;
+}
+.pack-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.sparkle {
+    animation: sparkle-glow 1.5s infinite alternate;
+}
+
+@keyframes sparkle-glow {
+    from {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.lunatic-logo {
+    filter: drop-shadow(0 0 8px white)
+            drop-shadow(0 0 18px #87ceeb);
+}
+
+.logo-frame {
+    display: inline-block;
+    padding: 15px 25px;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 20px #87ceeb;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logo-frame {
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+}
+
+.corner {
+    position: absolute;
+    color: white;
+    text-shadow: 0 0 10px white;
+    font-size: 18px;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.logo-frame {
+    position: relative;
+    display: inline-block;
+    padding: 15px 40px;
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 20px rgba(135, 206, 235, 0.8);
+}
+
+nav {
+    margin-top: 40px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+
+    padding: 9px 22px;
+    margin: 5px;
+
+    color: #7b1e2b;
+    background-color: #ffd700;
+
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    border: 1px solid #f5d76e;
+    border-radius: 8px;
+
+    box-shadow: 0 0 6px #f5d76e
+    0 0 8px rgba(255,255,255,0.4);
+}
+
+nav a:hover {
+    background-color: #f5d76e;
+    color: #7b1e2b;
+
+    box-shadow:
+        0 0 8px #f5d76e,
+        0 0 20px #f5d76e,
+        0 0 35px rgba(245, 215, 110, 0.7);
+}
+
+nav {
+    margin-top: 35px;
+    padding: 12px 0;
+}
+
+.secret-home {
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.secret-home:hover {
+    color: #00FFD0;
+    text-shadow: 0 0 10px #00FFD0;
+}
