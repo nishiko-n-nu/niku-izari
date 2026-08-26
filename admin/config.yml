@@ -1,0 +1,44 @@
+backend:
+  name: github
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  - name: "diary"
+    label: "日記"
+    folder: "content/diary"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "タイトル"
+        name: "title"
+        widget: "string"
+
+      - label: "日付"
+        name: "date"
+        widget: "datetime"
+
+      - label: "本文"
+        name: "body"
+        widget: "markdown"
+
+  - name: "urabanashi"
+    label: "裏話"
+    folder: "content/urabanashi"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "タイトル"
+        name: "title"
+        widget: "string"
+
+      - label: "日付"
+        name: "date"
+        widget: "datetime"
+
+      - label: "本文"
+        name: "body"
+        widget: "markdown"
