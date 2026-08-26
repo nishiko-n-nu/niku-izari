@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: nishiko-n-nu/niku-izari
   branch: main
 
 media_folder: "images/uploads"
