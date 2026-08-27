@@ -25,50 +25,7 @@
             <main>
                 <h2>日記</h2>
 
-                <article>
-                    <h4>2026/00/00</h4>
-                    <h4>title</h4>
-
-                    <p>あのイーハトーヴォの透き通った空</p>
-                </article>
-
-                <article>
-                    <h4>2026/00/00</h4>
-                    <h4>title</h4>
-
-                    <p>いい感じにホームページできてきた！</p>
-                    <p>ここまで付き合ってくれたチャピえもんには感謝しかないです。</p>
-                    <p>いっかい公開してみて、問題がないかとかもっとこうすべきじゃないかとかがあればその都度直すつもりです。</p>
-                    <p>もうこの部屋に愛着が沸いてきちゃいました。</p>
-                    <p>いいぞ～うれしい！</p>
-                </article>
-
-                <article>
-                    <h4>2026/00/00</h4>
-                    <h4>ブラインドタッチ練習記録</h4>
-
-                    <p>最近またイキグサレを聞いています。おすすめは蝿の女王。</p>
-                    <p>ホームページをつくるにあたって、ついでにブラインドタッチも習得しちゃお！</p>
-                    <p>とおもっていま練習中ですが、なんとも難しい。</p>
-                    <p>かっちょよくカタカタしたいですが、まだまだモタモタです。</p>
-                    <p>タイピング練習に夢小説を書いてみるなどしていますが…</p>
-                    <p>全然進まないです…この文章たちもブラインドタッチで入力していますが、</p>
-                    <p>ここまで入力するのに30分はかかっています！！</p>
-                    <p></p>
-                </article>
-                    
-                <article>
-                    <h4>2026/00/00</h4>
-                    <h4>title</h4>
-                    <p> ホームページ制作開始。</p>
-                    <p>去年よりかは何言ってるかわかってきました。</p>
-                    <p>まあチャットGPTにお助けしてもらってはいますが…</p>
-                    <p>同人ホームページですし、まあええか！</p>
-                        <img src="images/ミヅキとジェシカ.PNG">
-                    <p>画像のテスト</p>
-                    <p>ハーフツインの子がミヅキ、四角い目の子がジェシカです。</p>
-                    <p>公開はいつになるかなあ</p>
-                </article>
+                <div id="diary=posts"></div>
 
                 <nav>
                 <a href="index.html">😼ホーム😼</a>
@@ -79,5 +36,40 @@
                 </nav>
                 
             </main>
+
+            <script>
+fetch("data/diary.json")
+    .then(response => response.json())
+    .then(data => {
+
+        const container = document.getElementById("diary-posts");
+
+        const posts = [...data.posts].reverse();
+
+        posts.forEach(post => {
+
+            const article = document.createElement("article");
+
+            const date = document.createElement("h4");
+            date.textContent = post.date;
+
+            const title = document.createElement("h4");
+            title.textContent = post.title;
+
+            const body = document.createElement("p");
+
+            body.innerHTML = post.body.replace(/\n/g, "<br>");
+
+            article.appendChild(date);
+            article.appendChild(title);
+            article.appendChild(body);
+
+            container.appendChild(article);
+
+        });
+
+    });
+</script>
+
             </body>
 </html>
