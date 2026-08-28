@@ -7,38 +7,58 @@ public_folder: "/images/uploads"
 
 collections:
 
-  - name: "diary"
-    label: "日記"
-    folder: "content/diary"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - label: "タイトル"
-        name: "title"
-        widget: "string"
+  - name: "posts"
+    label: "投稿"
 
-      - label: "日付"
-        name: "date"
-        widget: "datetime"
+    files:
 
-      - label: "本文"
-        name: "body"
-        widget: "markdown"
+      - name: "diary"
+        label: "日記"
+        file: "data/diary.json"
+        format: "json"
 
-  - name: "urabanashi"
-    label: "裏話"
-    folder: "content/urabanashi"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - label: "タイトル"
-        name: "title"
-        widget: "string"
+        fields:
 
-      - label: "日付"
-        name: "date"
-        widget: "datetime"
+          - label: "日記一覧"
+            name: "posts"
+            widget: "list"
 
-      - label: "本文"
-        name: "body"
-        widget: "markdown"
+            fields:
+
+              - label: "日付"
+                name: "date"
+                widget: "string"
+
+              - label: "タイトル"
+                name: "title"
+                widget: "string"
+
+              - label: "本文"
+                name: "body"
+                widget: "text"
+
+
+      - name: "urabanashi"
+        label: "裏話"
+        file: "data/urabanashi.json"
+        format: "json"
+
+        fields:
+
+          - label: "裏話一覧"
+            name: "posts"
+            widget: "list"
+
+            fields:
+
+              - label: "日付"
+                name: "date"
+                widget: "string"
+
+              - label: "タイトル"
+                name: "title"
+                widget: "string"
+
+              - label: "本文"
+                name: "body"
+                widget: "text"
