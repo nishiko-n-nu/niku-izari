@@ -2,15 +2,19 @@
   "posts": [
     {
       "date": "2026/08/28",
-      "title": "テスト投稿",
+      "title": "ブロックテスト",
       "blocks": [
         {
           "type": "text",
-          "text": "これはテスト投稿です。"
+          "text": "文章ブロックその1です。"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/IMG_0177.PNG"
         },
         {
           "type": "text",
-          "text": "これから画像や文章を自由に並べられるようにします。"
+          "text": "この上に画像が表示される予定です。"
         }
       ]
     }
