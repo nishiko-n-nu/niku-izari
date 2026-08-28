@@ -6,7 +6,7 @@
       "blocks": [
         {
           "type": "text",
-          "text": "文章ブロックその1です。"
+          "text": "文章ブロックです。"
         },
         {
           "type": "image",
@@ -14,12 +14,13 @@
         },
         {
           "type": "image_left",
-          "image": "/images/uploads/IMG_0177.PNG",
-          "text": "これは画像の右側に表示される文章です。\n画像と文章を横に並べるテストです。"
+          "image": "/images/uploads/test2.jpg",
+          "text": "画像が左、文章が右です。"
         },
         {
-          "type": "text",
-          "text": "ここからまた普通の文章に戻れます。"
+          "type": "image_right",
+          "text": "今度は文章が左、画像が右です。",
+          "image": "/images/uploads/test3.jpg"
         }
       ]
     }
