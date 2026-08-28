@@ -33,32 +33,68 @@ collections:
                 name: "title"
                 widget: "string"
 
-              - label: "本文"
-                name: "body"
-                widget: "text"
+              - label: "内容"
+                name: "blocks"
+                widget: "list"
+                types:
+
+                  - label: "📝 文章"
+                    name: "text"
+                    widget: "object"
+                    fields:
+
+                      - label: "文章"
+                        name: "text"
+                        widget: "text"
 
 
-      - name: "urabanashi"
-        label: "裏話"
-        file: "data/urabanashi.json"
-        format: "json"
+                  - label: "🖼 画像"
+                    name: "image"
+                    widget: "object"
+                    fields:
 
-        fields:
+                      - label: "画像"
+                        name: "image"
+                        widget: "image"
 
-          - label: "裏話一覧"
-            name: "posts"
-            widget: "list"
 
-            fields:
+                  - label: "🖼📝 画像左＋文章右"
+                    name: "image_left"
+                    widget: "object"
+                    fields:
 
-              - label: "日付"
-                name: "date"
-                widget: "string"
+                      - label: "画像"
+                        name: "image"
+                        widget: "image"
 
-              - label: "タイトル"
-                name: "title"
-                widget: "string"
+                      - label: "文章"
+                        name: "text"
+                        widget: "text"
 
-              - label: "本文"
-                name: "body"
-                widget: "text"
+
+                  - label: "📝🖼 文章左＋画像右"
+                    name: "image_right"
+                    widget: "object"
+                    fields:
+
+                      - label: "文章"
+                        name: "text"
+                        widget: "text"
+
+                      - label: "画像"
+                        name: "image"
+                        widget: "image"
+
+
+                  - label: "🖼🖼 画像2枚横並び"
+                    name: "two_images"
+                    widget: "object"
+                    fields:
+
+                      - label: "左の画像"
+                        name: "image1"
+                        widget: "image"
+
+                      - label: "右の画像"
+                        name: "image2"
+                        widget: "image"

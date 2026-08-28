@@ -56,12 +56,118 @@ fetch("data/diary.json")
             const title = document.createElement("h4");
             title.textContent = post.title;
 
-            const body = document.createElement("p");
-            body.innerHTML = post.body.replace(/\n/g, "<br>");
-
             article.appendChild(date);
             article.appendChild(title);
-            article.appendChild(body);
+
+
+            post.blocks.forEach(block => {
+
+                /* 📝 文章 */
+
+                if (block.type === "text") {
+
+                    const text = document.createElement("p");
+
+                    text.innerHTML =
+                        block.text.replace(/\n/g, "<br>");
+
+                    article.appendChild(text);
+
+                }
+
+
+                /* 🖼 画像 */
+
+                if (block.type === "image") {
+
+                    const image = document.createElement("img");
+
+                    image.src = block.image;
+                    image.className = "diary-image";
+
+                    article.appendChild(image);
+
+                }
+
+
+                /* 🖼📝 画像左＋文章右 */
+
+                if (block.type === "image_left") {
+
+                    const row = document.createElement("div");
+
+                    row.className = "diary-row";
+
+                    const image = document.createElement("img");
+
+                    image.src = block.image;
+
+                    const text = document.createElement("p");
+
+                    text.innerHTML =
+                        block.text.replace(/\n/g, "<br>");
+
+                    row.appendChild(image);
+
+                    row.appendChild(text);
+
+                    article.appendChild(row);
+
+                }
+
+
+                /* 📝🖼 文章左＋画像右 */
+
+                if (block.type === "image_right") {
+
+                    const row = document.createElement("div");
+
+                    row.className = "diary-row";
+
+                    const text = document.createElement("p");
+
+                    text.innerHTML =
+                        block.text.replace(/\n/g, "<br>");
+
+                    const image = document.createElement("img");
+
+                    image.src = block.image;
+
+                    row.appendChild(text);
+
+                    row.appendChild(image);
+
+                    article.appendChild(row);
+
+                }
+
+
+                /* 🖼🖼 画像2枚横並び */
+
+                if (block.type === "two_images") {
+
+                    const row = document.createElement("div");
+
+                    row.className = "diary-two-images";
+
+                    const image1 = document.createElement("img");
+
+                    image1.src = block.image1;
+
+                    const image2 = document.createElement("img");
+
+                    image2.src = block.image2;
+
+                    row.appendChild(image1);
+
+                    row.appendChild(image2);
+
+                    article.appendChild(row);
+
+                }
+
+            });
+
 
             container.appendChild(article);
 
@@ -69,7 +175,12 @@ fetch("data/diary.json")
 
     })
     .catch(error => {
-        console.error("日記の読み込みに失敗しました:", error);
+
+        console.error(
+            "日記の読み込みに失敗しました:",
+            error
+        );
+
     });
 </script>
 

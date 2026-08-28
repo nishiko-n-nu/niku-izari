@@ -435,3 +435,62 @@ main {
 header {
     margin-top: 30px;
 }
+
+/* 日記・裏話の画像 */
+
+.diary-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+
+/* 画像＋文章 */
+
+.diary-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.diary-row img {
+    width: 45%;
+    height: auto;
+}
+
+.diary-row p {
+    flex: 1;
+    margin: 0;
+}
+
+
+/* 画像2枚横並び */
+
+.diary-two-images {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.diary-two-images img {
+    width: calc(50% - 5px);
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+    .diary-row {
+        flex-direction: column;
+    }
+
+    .diary-row img {
+        width: 100%;
+    }
+
+    .diary-two-images {
+        gap: 5px;
+    }
+
+}
