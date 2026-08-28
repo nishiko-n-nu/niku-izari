@@ -10,11 +10,16 @@
         },
         {
           "type": "image",
-          "image": "/images/uploads/IMG_0177.PNG"
+          "image": "/images/uploads/test.jpg"
+        },
+        {
+          "type": "image_left",
+          "image": "/images/uploads/IMG_0177.PNG",
+          "text": "これは画像の右側に表示される文章です。\n画像と文章を横に並べるテストです。"
         },
         {
           "type": "text",
-          "text": "この上に画像が表示される予定です。"
+          "text": "ここからまた普通の文章に戻れます。"
         }
       ]
     }
