@@ -815,25 +815,37 @@ header {
         display: flex;
         justify-content: center;
         align-items: stretch;
-        gap: 4px;
 
-        padding: 10px 5px 120px;
+        flex-wrap: nowrap;
+
+        gap: 3px;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 10px 3px 120px;
     }
 
     nav a {
-        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        padding: 14px 3px;
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        padding: 14px 2px;
 
         margin: 0;
 
-        font-size: 12px;
-
-        line-height: 1.4;
+        font-size: 11px;
+        line-height: 1.3;
 
         white-space: normal;
+        overflow-wrap: anywhere;
 
-        flex-wrap: nowrap;
+        box-sizing: border-box;
     }
 
 }
