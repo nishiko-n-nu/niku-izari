@@ -827,3 +827,29 @@ header {
         padding: 10px 7px;
     }
 }
+
+.news-list {
+    margin-top: 20px;
+}
+
+.news-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+
+    margin: 10px 0;
+
+    text-align: left;
+}
+
+.news-date {
+    flex-shrink: 0;
+}
+
+.news-text {
+    text-align: left;
+}
+
+.news-list {
+    text-align: left;
+}
