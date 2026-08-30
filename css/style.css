@@ -898,3 +898,21 @@ header {
     }
 
 }
+
+/* NEWSを左寄せにする */
+
+.news ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.news li {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.news time {
+    margin-right: 15px;
+}
