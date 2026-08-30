@@ -808,3 +808,32 @@ header {
     }
 
 }
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 4px;
+
+        padding: 10px 5px 120px;
+    }
+
+    nav a {
+        flex: 1;
+
+        padding: 14px 3px;
+
+        margin: 0;
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+        white-space: normal;
+
+        flex-wrap: nowrap;
+    }
+
+}
