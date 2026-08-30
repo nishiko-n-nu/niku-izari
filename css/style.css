@@ -494,3 +494,317 @@ header {
     }
 
 }
+
+/* =========================
+   キャラクター紹介
+========================= */
+
+/* 創作タイトル */
+
+.work-title {
+    margin: 70px 0 25px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-title::before,
+.work-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+}
+
+
+/* キャラクター一覧 */
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 30px auto;
+    padding: 0 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* キャラクターボタン */
+
+.character-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    color: #222;
+    font: inherit;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* 一覧の画像 */
+
+.character-item img {
+    display: block;
+
+    width: 100%;
+    max-width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+}
+
+
+/* 名前 */
+
+.character-item p {
+    margin: 8px 0 0;
+
+    font-weight: bold;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   ポップアップ
+========================= */
+
+/* 背景 */
+
+.character-modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 表示 */
+
+.character-modal.show {
+    display: flex;
+}
+
+
+/* ポップアップ本体 */
+
+.character-modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    background-color: white;
+
+    padding: 35px 30px 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* キャラ名 */
+
+#modal-name {
+    font-size: 32px;
+
+    margin: 0 40px 20px;
+}
+
+
+/* ポップアップ画像 */
+
+#modal-image {
+    display: block;
+
+    width: 100%;
+    max-width: 380px;
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* キャラクター説明 */
+
+.character-info {
+    margin-top: 25px;
+
+    text-align: left;
+}
+
+
+.character-info h3 {
+    margin: 25px 0 5px;
+}
+
+
+.character-info p {
+    margin: 0;
+
+    white-space: pre-line;
+
+    line-height: 1.7;
+}
+
+
+/* 閉じるボタン */
+
+.modal-close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    z-index: 1;
+
+    border: none;
+    background: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    /* 3列を絶対に維持 */
+
+    .character-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+
+        padding: 0 8px;
+    }
+
+
+    /* 一覧画像を小さく */
+
+    .character-item img {
+        width: 100%;
+        max-width: 100px;
+
+        height: 95px;
+    }
+
+
+    /* 名前 */
+
+    .character-item p {
+        margin-top: 4px;
+
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+
+    /* ポップアップ */
+
+    .character-modal {
+        padding: 10px;
+    }
+
+
+    .character-modal-content {
+        width: 100%;
+
+        max-height: 88vh;
+
+        padding: 30px 18px 25px;
+
+        border-radius: 15px;
+    }
+
+
+    /* キャラ名 */
+
+    #modal-name {
+        font-size: 25px;
+
+        margin: 0 35px 15px;
+    }
+
+
+    /* ポップアップ画像 */
+
+    #modal-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    /* 説明 */
+
+    .character-info {
+        margin-top: 18px;
+    }
+
+
+    .character-info h3 {
+        margin-top: 20px;
+
+        font-size: 18px;
+    }
+
+
+    .character-info p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* 閉じる */
+
+    .modal-close {
+        font-size: 30px;
+    }
+
+}
