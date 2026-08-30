@@ -420,16 +420,6 @@ main {
         height: auto;
     }
 
-    /* ナビ */
-    nav {
-        padding: 10px 10px 100px;
-    }
-
-    nav a {
-        padding: 10px 14px;
-        margin: 4px;
-    }
-
 }
 
 header {
@@ -826,12 +816,12 @@ header {
     margin-right: 15px;
 }
 
+/* スマホのナビだけ横スクロール */
 @media screen and (max-width: 600px) {
 
     nav {
         display: flex;
         flex-wrap: nowrap;
-
         justify-content: flex-start;
 
         gap: 10px;
@@ -865,5 +855,4 @@ header {
 
         font-size: 12px;
     }
-
 }
