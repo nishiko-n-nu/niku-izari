@@ -808,97 +808,6 @@ header {
     }
 
 }
-
-@media screen and (max-width: 600px) {
-
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-
-        flex-wrap: nowrap;
-
-        gap: 3px;
-
-        width: 100%;
-        box-sizing: border-box;
-
-        padding: 10px 3px 120px;
-    }
-
-    nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        flex: 1 1 0;
-
-        min-width: 0;
-
-        padding: 14px 2px;
-
-        margin: 0;
-
-        font-size: 11px;
-        line-height: 1.3;
-
-        white-space: normal;
-        overflow-wrap: anywhere;
-
-        box-sizing: border-box;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-
-    nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        padding: 10px 2px 120px !important;
-        margin: 0 !important;
-
-        gap: 2px !important;
-
-        box-sizing: border-box !important;
-
-        justify-content: center !important;
-    }
-
-    nav a {
-        display: flex !important;
-
-        width: calc((100% - 10px) / 6) !important;
-        flex: 0 0 calc((100% - 10px) / 6) !important;
-
-        min-width: 0 !important;
-        max-width: none !important;
-
-        min-height: 70px !important;
-
-        padding: 5px 1px !important;
-        margin: 0 !important;
-
-        box-sizing: border-box !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-
-        font-size: 9px !important;
-        line-height: 1.4 !important;
-
-        white-space: normal !important;
-        overflow-wrap: anywhere !important;
-    }
-
-}
-
 /* NEWSを左寄せにする */
 
 .news ul {
@@ -915,4 +824,47 @@ header {
 
 .news time {
     margin-right: 15px;
+}
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 3px;
+
+        padding: 10px 2px 100px;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        padding: 10px 2px;
+
+        margin: 0;
+
+        font-size: 10px;
+
+        line-height: 1.3;
+
+        text-align: center;
+
+        border-radius: 8px;
+
+        box-sizing: border-box;
+
+        white-space: normal;
+
+        word-break: break-word;
+    }
+
 }
