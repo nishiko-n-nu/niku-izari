@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>アーカイブ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <span class="header-corner corner-tl">✦</span>
+        <span class="header-corner corner-tr">✦</span>
+        <span class="header-corner corner-bl">✦</span>
+        <span class="header-corner corner-br">✦</span>
+
+        <div class="header-decoration">
+            <img src="images/星.png" alt="">
+            <h1>にしこの脳内</h1>
+            <img src="images/クローバー.png" alt="">
+        </div>
+
+        <p>恋は下心、愛は真心</p>
+
+    </header>
+
+
+    <main>
+
+        <h2>📦 ~2021 ARCHIVE 📦</h2>
+
+        <p class="archive-intro">
+            ~2021年の絵
+        </p>
+
+
+        <!-- ここにJavaScriptで画像一覧が自動表示されます -->
+        <div class="archive-gallery" id="archive-gallery"></div>
+
+
+        <!-- ナビ -->
+        <nav>
+        <a href="index.html">😼ホーム😼</a>
+        <a href="about.html">🙀ABOUT of にしこ🙀</a>
+        <a href="gallery.html">😽作品たち😽</a>
+        <a href="urabanashi.html">😾裏話😾</a>
+        <a href="diary.html">😻日記😻</a>
+        <a href="characters.html">😸キャラ一覧😸</a>
+        <a href="tomodachi.html">😿島😿</a>
+        <a href="archive.html">😹アーカイブ😹</a>
+    </nav>
+
+    </main>
+
+
+    <!-- ポップアップ -->
+    <div id="archive-modal" class="archive-modal">
+
+        <div class="archive-modal-content">
+
+            <button
+                class="archive-close"
+                onclick="closeArchive()"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+
+            <img id="modal-image" src="" alt="">
+
+
+            <h2 id="modal-date"></h2>
+
+
+            <!-- 自語りがここに表示されます -->
+            <div id="modal-text"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+           アーカイブのデータ
+        ========================= */
+
+        const archivePosts = [
+
+            {
+                image: "images/archive-2025-1.png",
+
+                date: "2025年1月ごろ",
+
+                text: `
+                    <p>
+                        ここに当時の自語りを書くにょ。
+                    </p>
+
+                    <p>
+                        昔の自分はこんな絵を描いていました。
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive-2025-2.png",
+
+                date: "2025年6月ごろ",
+
+                text: `
+                    <p>
+                        2枚目の画像についての自語りにょ。
+                    </p>
+
+                    <p>
+                        この頃はこういうことを考えていました。
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive-2025-3.png",
+
+                date: "2025年10月ごろ",
+
+                text: `
+                    <p>
+                        3枚目の自語りにょ。
+                    </p>
+                `
+            }
+
+        ];
+
+
+        /* =========================
+           ギャラリーを作る
+        ========================= */
+
+        const gallery =
+            document.getElementById("archive-gallery");
+
+
+        archivePosts.forEach((post, index) => {
+
+            const item =
+                document.createElement("button");
+
+
+            item.className =
+                "archive-item";
+
+
+            item.innerHTML = `
+                <img
+                    src="${post.image}"
+                    alt="${post.date}"
+                >
+
+                <p>${post.date}</p>
+            `;
+
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    openArchive(index);
+
+                }
+            );
+
+
+            gallery.appendChild(item);
+
+        });
+
+
+        /* =========================
+           ポップアップを開く
+        ========================= */
+
+        function openArchive(index) {
+
+            const post =
+                archivePosts[index];
+
+
+            document
+                .getElementById("archive-modal-image")
+                .src = post.image;
+
+
+            document
+                .getElementById("archive-modal-image")
+                .alt = post.date;
+
+
+            document
+                .getElementById("archive-modal-date")
+                .textContent = post.date;
+
+
+            document
+                .getElementById("archive-modal-text")
+                .innerHTML = post.text;
+
+
+            document
+                .getElementById("archive-modal")
+                .classList.add("active");
+
+        }
+
+
+        /* =========================
+           ポップアップを閉じる
+        ========================= */
+
+        function closeArchive() {
+
+            document
+                .getElementById("archive-modal")
+                .classList.remove("active");
+
+        }
+
+
+        /* 背景を押しても閉じられるようにする */
+
+        document
+            .getElementById("archive-modal")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (
+                        event.target ===
+                        this
+                    ) {
+
+                        closeArchive();
+
+                    }
+
+                }
+            );
+
+    </script>
+
+</body>
