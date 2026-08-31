@@ -1381,3 +1381,30 @@ header {
     }
 
 }
+
+nav {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 6px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+nav a {
+    margin: 0;
+
+    min-width: 0;
+
+    padding: 10px 3px;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
