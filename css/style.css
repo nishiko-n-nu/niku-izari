@@ -1358,29 +1358,6 @@ header {
 }
 
 
-/* =========================
-   スマホ
-========================= */
-
-@media screen and (max-width: 600px) {
-
-    .tomodachi-gallery {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        width: 100%;
-
-        max-width: 500px;
-
-        margin: 30px auto 50px;
-
-        padding: 0 15px;
-
-        box-sizing: border-box;
-    }
-
-}
 
 nav {
     display: grid;
