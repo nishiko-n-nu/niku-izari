@@ -477,6 +477,7 @@ header {
 
     .diary-row img {
         width: 100%;
+        height: auto;
     }
 
     .diary-two-images {
@@ -1549,3 +1550,4 @@ nav a:hover {
     }
 
 }
+
