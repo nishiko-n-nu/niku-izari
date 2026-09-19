@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>肉いざり</title>
+         <link rel="stylesheet" href="css/style.css">
+         <style>
+.archive-gallery img {
+    display: block !important;
+    width: 200px !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+</style>
+        </head>
+    <body>
+        <header>
+
+    <span class="header-corner corner-tl">✦</span>
+    <span class="header-corner corner-tr">✦</span>
+    <span class="header-corner corner-bl">✦</span>
+    <span class="header-corner corner-br">✦</span>
+
+            <div class="header-decoration">
+    <img src="images/星.png" alt="">
+    <h1>にしこの脳内</h1>
+    <img src="images/クローバー.png" alt="">
+</div>
+            <p>恋は下心、愛は真心</p>
+            </header>
+
+
+
+    <main>
+
+        <h2>📦 ~2021 ARCHIVE 📦</h2>
+
+        <p class="archive-intro">
+            ~2021年の絵
+        </p>
+
+
+        <!-- ここにJavaScriptで画像一覧が自動表示されます -->
+        <div class="archive-gallery" id="archive-gallery"></div>
+
+
+        <!-- ナビ -->
+       <nav>
+        <a href="index.html">😼ホーム😼</a>
+        <a href="about.html">🙀ABOUT of にしこ🙀</a>
+        <a href="gallery.html">😽作品たち😽</a>
+        <a href="characters.html">😸キャラ一覧😸</a>
+        <a href="tomodachi.html">😿島😿</a>
+        <a href="urabanashi.html">😾裏話😾</a>
+        <a href="diary.html">😻日記😻</a>
+        <a href="archive.html">😹アーカイブ😹</a>
+    </nav>
+
+    </main>
+
+
+    <!-- ポップアップ -->
+    <div id="archive-modal" class="archive-modal">
+
+        <div class="archive-modal-content">
+
+            <button
+                class="archive-close"
+                onclick="closeArchive()"
+                aria-label="閉じる"
+            >
+                ×
+            </button>
+
+
+            <img id="modal-image" src="" alt="">
+
+
+            <h2 id="modal-date"></h2>
+
+
+            <!-- 自語りがここに表示されます -->
+            <div id="modal-text"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+           アーカイブのデータ
+        ========================= */
+
+        const archivePosts = [
+
+            {
+                image: "images/archive/archive_2021-2025/1.jpg",
+
+                date: "2021年ごろ？",
+
+                text: `
+                    <p>
+                        黒塗り世界宛て書簡のパロディらしいです。
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive/archive_2021-2025/2.jpg",
+
+                date: "2021年12月ごろ",
+
+                text: `
+                    <p>
+                        なんか見やすくてお気に入り。
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive/archive_2021-2025/3.jpg",
+
+                date: "2021年12月ごろ",
+
+                text: `
+                    <p>
+                        この時期はアナログモノクロにハマってましたね。
+                    </p>
+                `
+            },
+
+            {
+                image: "images/archive/archive_2021-2025/4.jpg",
+
+                date: "2022年4月ごろ",
+
+                text: `
+                    <p>
+                        よくおぼえてないっす。この味のモンスターって美味しかったっけ？
+                    </p>
+                `
+            },
+
+            {
+                image: "images/archive/archive_2021-2025/5.jpg",
+
+                date: "2024年ごろ",
+
+                text: `
+                    <p>
+                        つけペンにハマって描いてたやつですね。ハルカは描いていてたのしい。
+                    </p>
+                `
+            },
+
+            {
+                image: "images/archive/archive_2021-2025/6.jpg",
+
+                date: "2024年ごろ",
+
+                text: `
+                    <p>
+                        表情がかわいい！
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive/archive_2021-2025/7.jpg",
+
+                date: "2024年ごろ",
+
+                text: `
+                    <p>
+                        塾がヒマすぎて描いたやつ。濃いめの鉛筆が好き。
+                    </p>
+                `
+            },
+
+
+            {
+                image: "images/archive/archive_2021-2025/8.jpg",
+
+                date: "2024年12月ごろ",
+
+                text: `
+                    <p>
+                        イオンのやつを塾で学んでたときに描いたやつです。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/9.jpg",
+
+                date: "2024年10月ごろ",
+
+                text: `
+                    <p>
+                        低頭身について考えていました。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/10.jpg",
+
+                date: "2024年10月ごろ",
+
+                text: `
+                    <p>
+                        かわいいキャラデザｂ
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/11.jpg",
+
+                date: "2023年ごろ",
+
+                text: `
+                    <p>
+                        ストップ恋愛絶対ダメ！
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/12.jpg",
+
+                date: "2025年ごろ",
+
+                text: `
+                    <p>
+                        アクリルガッシュの練習。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/13.jpg",
+
+                date: "2023年4月ごろ",
+
+                text: `
+                    <p>
+                        サヨリと桜を見に行きたいです。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/14.jpg",
+
+                date: "2023年ごろ",
+
+                text: `
+                    <p>
+                        枝豆コラボ。めっちゃ時間かけました。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/15.jpg",
+
+                date: "2023年ごろ",
+
+                text: `
+                    <p>
+                        足立レイにハマってました。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/16.jpg",
+
+                date: "2023年",
+
+                text: `
+                    <p>
+                        でじこのしっぽ！
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/17.jpg",
+
+                date: "2025年ごろ",
+
+                text: `
+                    <p>
+                        かわいいミニキャラ
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/18.jpg",
+
+                date: "2025年10月ごろ",
+
+                text: `
+                    <p>
+                        魚をなぜかリアルに描いています。なんで？
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/19.jpg",
+
+                date: "2025年10月ごろ",
+
+                text: `
+                    <p>
+                        指書きだったとおもいます。
+                    </p>
+                `
+            },
+
+             {
+                image: "images/archive/archive_2021-2025/20.jpg",
+
+                date: "2025年10月ごろ",
+
+                text: `
+                    <p>
+                        これも多分指書き。
+                    </p>
+                `
+            },
+
+        ];
+
+
+        /* =========================
+           ギャラリーを作る
+        ========================= */
+
+        const gallery =
+            document.getElementById("archive-gallery");
+
+
+        archivePosts.forEach((post, index) => {
+
+            const item =
+                document.createElement("button");
+
+
+            item.className =
+                "archive-item";
+
+
+            item.innerHTML = `
+                <img
+                    src="${post.image}"
+                    alt="${post.date}"
+                >
+
+                <p>${post.date}</p>
+            `;
+
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    openArchive(index);
+
+                }
+            );
+
+
+            gallery.appendChild(item);
+
+        });
+
+
+        /* =========================
+           ポップアップを開く
+        ========================= */
+
+        function openArchive(index) {
+
+            const post =
+                archivePosts[index];
+
+
+            document
+                .getElementById("modal-image")
+                .src = post.image;
+
+
+            document
+                .getElementById("modal-image")
+                .alt = post.date;
+
+
+            document
+                .getElementById("modal-date")
+                .textContent = post.date;
+
+
+            document
+                .getElementById("modal-text")
+                .innerHTML = post.text;
+
+
+            document
+                .getElementById("archive-modal")
+                .classList.add("active");
+
+        }
+
+
+        /* =========================
+           ポップアップを閉じる
+        ========================= */
+
+        function closeArchive() {
+
+            document
+                .getElementById("archive-modal")
+                .classList.remove("active");
+
+        }
+
+
+        /* 背景を押しても閉じられるようにする */
+
+        document
+            .getElementById("archive-modal")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (
+                        event.target ===
+                        this
+                    ) {
+
+                        closeArchive();
+
+                    }
+
+                }
+            );
+
+    </script>
+
+</body>
