@@ -46,7 +46,7 @@ async function loadProduct() {
       description
     );
 
-    document.title = product.name + "｜激安！オレンジ市場";
+    document.title = product.name + "｜新鮮ニシン店";
 
   } catch (error) {
     detail.textContent = "商品情報の読み込みに失敗しました。";

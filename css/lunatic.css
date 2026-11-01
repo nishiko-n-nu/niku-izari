@@ -843,3 +843,112 @@ nav {
     }
 
 }
+
+/* 商品を上下に並べる */
+.pack-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 画像と説明を1セットにする */
+.pack-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* 画像のサイズ */
+.pack-item .pack-image {
+    flex: 0 0 40%;
+    display: block;
+}
+
+.pack-item .pack-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 説明部分 */
+.pack-item .pack-info {
+    flex: 0 0 40%;
+}
+
+/* 商品紹介の中身 */
+.pack-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* 商品画像 */
+.pack-item .pack-image {
+    display: block;
+    flex: 0 0 50%;
+}
+
+.pack-item .pack-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 商品説明 */
+.pack-item .pack-info {
+    flex: 0 0 40%;
+    text-align: center;
+    min-width: 0;
+}
+
+/* 商品タイトル */
+.pack-item .pack-info h2 {
+    font-size: 28px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* リンクの青色・下線を消す */
+.pack-item .pack-info h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* マウスを乗せたとき */
+.pack-item .pack-info h2 a:hover {
+    color: #ffd700;
+}
+
+@media screen and (max-width: 600px) {
+
+    .pack-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .pack-item .pack-image {
+        width: 85%;
+        flex: none;
+    }
+
+    .pack-item .pack-info {
+        width: 100%;
+        flex: none;
+        text-align: center;
+    }
+
+    .pack-item .pack-info h2 {
+        font-size: 24px;
+    }
+
+}
