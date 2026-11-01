@@ -1184,7 +1184,7 @@ header {
 
 /* ポップアップ内の画像 */
 
-#archive-modal-image {
+#modal-image {
     display: block;
 
     width: 100%;
@@ -1202,7 +1202,7 @@ header {
 
 /* 日付・タイトル */
 
-#archive-modal-date {
+#modal-date {
     margin: 10px 0 25px;
 
     font-size: 28px;
@@ -1211,7 +1211,7 @@ header {
 
 /* 自語り部分 */
 
-#archive-modal-text {
+#modal-text {
     max-width: 600px;
 
     margin: 0 auto;
@@ -1222,7 +1222,7 @@ header {
 }
 
 
-#archive-modal-text p {
+#modal-text p {
     margin: 0 0 1em;
 }
 
@@ -1290,19 +1290,19 @@ header {
     }
 
 
-    #archive-modal-image {
+    #modal-image {
         max-height: 400px;
     }
 
 
-    #archive-modal-date {
+    #modal-date {
         margin: 10px 30px 20px;
 
         font-size: 23px;
     }
 
 
-    #archive-modal-text {
+    #modal-text {
         font-size: 15px;
 
         line-height: 1.7;
@@ -1551,3 +1551,189 @@ nav a:hover {
 
 }
 
+
+
+
+/* ===== オレンジ市場 ===== */
+
+.shop-header {
+  background: #fff;
+  color: #333;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 5px solid #f58220;
+}
+
+.shop-header h1 {
+  margin: 0;
+  color: #f58220;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 0 #ffd18c;
+}
+
+.shop-header p {
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.shop-header input {
+  width: min(90%, 600px);
+  padding: 12px;
+  margin-top: 12px;
+  border: 3px solid #f58220;
+  border-radius: 2px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.shop-main {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 20px;
+  background: #fff;
+}
+
+.shop-main h2 {
+  color: #333;
+  border-left: 7px solid #f58220;
+  border-bottom: 2px solid #f58220;
+  padding: 8px 10px;
+  font-size: 1.3rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #eee;
+}
+
+.product-card a {
+  color: #222;
+  text-decoration: none;
+}
+
+.product-card a:hover {
+  color: #f58220;
+  text-decoration: underline;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.product-card h3 {
+  font-size: 0.95rem;
+  min-height: 2.5em;
+}
+
+.product-price {
+  color: #e60012;
+  font-weight: 900;
+  font-size: 1.35rem;
+}
+
+.shop-footer {
+  background: #f5f5f5;
+  color: #666;
+  border-top: 3px solid #f58220;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+
+/* ===== 商品詳細ページ ===== */
+
+.shop-page {
+  background: #fff !important;
+  color: #292929;
+}
+
+.shop-page .shop-header {
+  background: #fff;
+  color: #333;
+  border-bottom: 5px solid #f58220;
+  padding: 15px;
+  text-align: center;
+}
+
+.shop-page .shop-header h1 a {
+  color: #f58220;
+  text-decoration: none;
+}
+
+.product-main {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 15px;
+  background: #fff;
+}
+
+.product-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+}
+
+.product-main .product-price {
+  color: #e60012;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.reviews-section {
+  margin-top: 40px;
+}
+
+.reviews-section h2 {
+  border-left: 6px solid #f58220;
+  border-bottom: 1px solid #f58220;
+  padding: 8px;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 550px;
+}
+
+#review-form input,
+#review-form select,
+#review-form textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  font: inherit;
+}
+
+#review-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#review-form button {
+  padding: 12px;
+  background: #f58220;
+  color: white;
+  border: 0;
+  font-weight: bold;
+}

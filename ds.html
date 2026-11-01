@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <style>
+  body {
+    background: #ffffff !important;
+    color: #292929;
+  }
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品詳細</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="shop-page">
+
+  <header class="shop-header">
+    <h1><a href="shop.html">新鮮ニシン店</a></h1>
+    <p>安心と信頼の激安通販</p>
+  </header>
+
+  <main class="product-main">
+
+    <p><a href="shop.html">← 商品一覧に戻る</a></p>
+
+    <section id="product-detail">
+      商品情報を読み込んでいます……
+    </section>
+
+    <hr>
+
+    <section class="reviews-section">
+      <h2>購入者のレビュー</h2>
+
+      <div id="review-list">
+        <p>レビューを読み込んでいます……</p>
+      </div>
+
+      <h2>レビューを投稿する</h2>
+
+      <form id="review-form">
+        <label for="review-name">お名前（ニックネーム可）</label>
+        <input id="review-name" type="text" maxlength="40"
+          placeholder="匿名希望">
+
+        <label for="review-rating">評価</label>
+        <select id="review-rating" required>
+          <option value="5">★★★★★ とても良い</option>
+          <option value="4">★★★★☆ 良い</option>
+          <option value="3">★★★☆☆ 普通</option>
+          <option value="2">★★☆☆☆ 悪い</option>
+          <option value="1">★☆☆☆☆ とても悪い</option>
+        </select>
+
+        <label for="review-text">レビュー本文</label>
+        <textarea id="review-text" maxlength="1000"
+          placeholder="商品の感想をお書きください。" required></textarea>
+
+        <button type="button" disabled>
+          レビュー投稿（準備中）
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="shop-footer">
+    <p>激安！オレンジ市場 © 2026</p>
+  </footer>
+
+  <script src="js/ds.js"></script>
+
+</body>
+</html>
