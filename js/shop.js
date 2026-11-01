@@ -32,7 +32,7 @@ function displayProducts(items) {
 
     const link = document.createElement("a");
 
-    if (product.id === "002") {
+    if (product.id === "001") {
       link.href = "ds.html";
     } else {
       link.href = `product.html?id=${encodeURIComponent(product.id)}`;

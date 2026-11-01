@@ -8,7 +8,7 @@ const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const reviewList = document.getElementById("review-list");
 const reviewForm = document.getElementById("review-form");
 
-const PRODUCT_ID = "002";
+const PRODUCT_ID = "001";
 
 // レビューを読み込む
 async function loadReviews() {

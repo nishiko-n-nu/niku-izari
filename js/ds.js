@@ -4,7 +4,7 @@ const detail = document.getElementById("product-detail");
 async function loadProduct() {
 
   // DSソフトの商品ID
-  const id = "002";
+  const id = "001";
 
   try {
     const response = await fetch("data/products.json");
