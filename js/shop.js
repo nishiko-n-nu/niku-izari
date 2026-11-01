@@ -7,6 +7,11 @@ let products = [];
 async function loadProducts() {
   try {
     const response = await fetch("data/products.json");
+
+    if (!response.ok) {
+      throw new Error("商品データを読み込めませんでした");
+    }
+
     const data = await response.json();
 
     products = data.products;
@@ -25,15 +30,31 @@ function displayProducts(items) {
     const card = document.createElement("article");
     card.className = "product-card";
 
-    card.innerHTML = `
-      <a href="product.html?id=${product.id}">
-        <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-      </a>
-      <p class="product-price">¥${product.price.toLocaleString()}</p>
-      <p>${product.category}</p>
-    `;
+    const link = document.createElement("a");
 
+    if (product.id === "002") {
+      link.href = "ds.html";
+    } else {
+      link.href = `product.html?id=${encodeURIComponent(product.id)}`;
+    }
+
+    const image = document.createElement("img");
+    image.src = product.image;
+    image.alt = product.name;
+
+    const name = document.createElement("h3");
+    name.textContent = product.name;
+
+    link.append(image, name);
+
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent = "¥" + product.price.toLocaleString();
+
+    const category = document.createElement("p");
+    category.textContent = product.category;
+
+    card.append(link, price, category);
     productList.appendChild(card);
   });
 }

@@ -2,8 +2,9 @@
 const detail = document.getElementById("product-detail");
 
 async function loadProduct() {
-  const params = new URLSearchParams(location.search);
-  const id = params.get("id");
+
+  // DSソフトの商品ID
+  const id = "002";
 
   try {
     const response = await fetch("data/products.json");
